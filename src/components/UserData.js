@@ -5,28 +5,49 @@ import "./UserData.css";
 
 export default function UserData() {
 	const [userData, setUserData] = useState([]);
+	const [motto, setMotto] = useState([]);
 	const [showMore, setShowMore] = useState(false);
 
-	const getData = async () => {
+	const getRandomUserData = async () => {
 		const response = await axios.get("https://api.randomuser.me");
 		setUserData(response.data.results);
 	};
 
+	const getRandomQuote = async () => {
+		const response = await axios.get("https://freequote.herokuapp.com/");
+		setMotto(response.data);
+	};
+
 	useEffect(() => {
-		getData();
+		getRandomUserData();
 	}, []);
 
-	console.log(userData);
+	useEffect(() => {
+		getRandomQuote();
+	}, [userData]);
 
 	return (
 		<div className="card">
+			<button className="generate-user" onClick={getRandomUserData}>
+				Generate a User
+			</button>
 			{userData.map((user, index) => {
-				return <User {...user} key={index} />;
+				return (
+					<div>
+						<User {...user} key={index} />
+						<p>
+							<span class="motto-p">
+								"<em>{motto.quote}</em>"
+							</span>
+						</p>
+					</div>
+				);
 			})}
-			<button onClick={() => setShowMore(!showMore)}>See Contact Info</button>
+			<button className="contact-btn" onClick={() => setShowMore(!showMore)}>
+				See Contact Info
+			</button>
 			{showMore ? (
 				<div>
-					<h3>Contact Info:</h3>
 					<p>{userData[0].email}</p>
 					<p>
 						<strong>Phone:</strong> {userData[0].phone}

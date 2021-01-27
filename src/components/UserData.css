@@ -4,13 +4,42 @@
 	display: flex;
 	flex-direction: column;
 	margin: 1em 2em;
-	padding: 1em;
-	box-shadow: 20px 20px 100px #ffffff, -20px -20px 100px #ffffff;
-	border: 1px solid black;
+	padding: 3em;
+	border: 1px solid rgba(0, 0, 0, 0.301);
+	background: linear-gradient(145deg, #e6e6e6, #ffffff);
+	box-shadow: 20px 20px 100px #d9d9d9, -20px -20px 100px #ffffff;
 }
 
-button {
+.contact-btn {
 	border: none;
 	outline: none;
 	padding: 1em;
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.267);
+	color: white;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.contact-btn:hover {
+	background: rgba(0, 0, 0, 0.692);
+}
+
+.generate-user {
+	width: 30%;
+	margin: 0 auto;
+	height: 40px;
+	background: rgb(42, 116, 212);
+	color: white;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.generate-user:hover {
+	background: rgb(7, 62, 134);
+}
+
+.motto-p {
+	font-size: 12px;
 }
