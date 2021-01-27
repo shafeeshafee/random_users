@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import User from "./User";
+import "./UserData.css";
 
-export default function GetUserData() {
+export default function UserData() {
 	const [userData, setUserData] = useState([]);
 	const [showMore, setShowMore] = useState(false);
 
@@ -18,7 +19,7 @@ export default function GetUserData() {
 	console.log(userData);
 
 	return (
-		<div>
+		<div className="card">
 			{userData.map((user, index) => {
 				return <User {...user} key={index} />;
 			})}

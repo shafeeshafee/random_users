@@ -1,10 +1,19 @@
 import "./App.css";
-import GetUserData from "./components/GetUserData";
+import UserData from "./components/UserData";
+import Heading from "./components/Heading";
 
 function App() {
 	return (
-		<div className="App">
-			<GetUserData />
+		<div>
+			<Heading />
+			<div className="app-container">
+				<UserData />
+				<UserData />
+				<UserData />
+				<UserData />
+				<UserData />
+				<UserData />
+			</div>
 		</div>
 	);
 }
