@@ -15,7 +15,7 @@ export default function QuoteData() {
 	return (
 		<p>
 			<span class="motto-p">
-				"<em>{motto.quote}</em>"
+				Motto: "<em>{motto.quote}</em>"
 			</span>
 		</p>
 	);
