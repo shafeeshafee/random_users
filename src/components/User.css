@@ -5,3 +5,7 @@
 em {
 	color: rgb(49, 49, 49);
 }
+
+img {
+	border-radius: 50%;
+}
