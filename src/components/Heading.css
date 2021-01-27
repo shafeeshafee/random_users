@@ -5,8 +5,14 @@
 	text-align: center;
 }
 
+.heading h1 {
+	color: white;
+	letter-spacing: 5px;
+	filter: drop-shadow(1px 1px 4px #060629);
+}
+
 h4 {
 	font-weight: 100;
 	font-style: italic;
-	color: rgb(42, 116, 212);
+	color: white;
 }

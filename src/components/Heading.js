@@ -7,7 +7,7 @@ export default function Heading() {
 	return (
 		<div className="heading">
 			<h1>
-				<FontAwesomeIcon icon={faAddressCard} /> RandomHippo
+				<FontAwesomeIcon icon={faAddressCard} /> RandomizeMe
 			</h1>
 			<h4>The best place to meet new AI personas</h4>
 		</div>
